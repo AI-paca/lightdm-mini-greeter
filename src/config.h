@@ -36,6 +36,8 @@ typedef struct Config_ {
     GdkRGBA  *border_color;
     gchar    *border_width;
     guint     layout_spacing;
+    gint      x_offset;
+    gint      y_offset;
     // Password Input
     gunichar *password_char;
     GdkRGBA  *password_color;
