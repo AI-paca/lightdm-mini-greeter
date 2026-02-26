@@ -169,13 +169,9 @@ static void setup_main_window(Config *config, UI *ui)
 
     gtk_container_set_border_width(GTK_CONTAINER(main_window), config->layout_spacing);
     gtk_widget_set_name(GTK_WIDGET(main_window), "main");
-
-<<<<<<< HEAD
-    g_signal_connect(main_window, "show", G_CALLBACK(place_main_window), NULL);
-    g_signal_connect(main_window, "realize", G_CALLBACK(hide_mouse_cursor), NULL);
-=======
+    //g_signal_connect(main_window, "show", G_CALLBACK(place_main_window), NULL);
+    //g_signal_connect(main_window, "realize", G_CALLBACK(hide_mouse_cursor), NULL);
     g_signal_connect(main_window, "show", G_CALLBACK(place_main_window), config);
->>>>>>> 5a849f3 (added support for x-y offsets for window position)
     g_signal_connect(main_window, "destroy", G_CALLBACK(gtk_main_quit), NULL);
 
     ui->main_window = main_window;
